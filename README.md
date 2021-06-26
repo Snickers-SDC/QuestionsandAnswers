@@ -4,7 +4,9 @@
 ETL Code
 
 //*********************************************************************************
+
                       Imports
+                      
 *********************************************************************************//
 
 mongoimport --db=sdc --collection=questions --type=csv --headerline --ignoreBlanks --file=/Users/felipeerazo/Downloads/questions.csv
@@ -12,7 +14,9 @@ mongoimport --db=sdc --collection=answers --type=csv --headerline --ignoreBlanks
 mongoimport --db=sdc --collection=photos --type=csv --headerline --ignoreBlanks --file=/Users/felipeerazo/Downloads/photos.csv
 
 //*********************************************************************************
+
                       Indexing
+                      
 *********************************************************************************//
 
 db.questions.createIndex({id: 1})
@@ -23,7 +27,9 @@ db.answerscombines.createIndex({id: 1})
 db.answerscombines.createIndex({question_id: 1})
 
 //*********************************************************************************
+
                       Aggregation Pipiline
+                      
 *********************************************************************************//
 
 db.answers.aggregate([{$lookup: { from: 'photos', 
