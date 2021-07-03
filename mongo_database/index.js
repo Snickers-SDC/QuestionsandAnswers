@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost/sdc', {useNewUrlParser: true,  useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false});
+mongoose.connect('mongodb://mongo:27017/sdc', {useNewUrlParser: true,  useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false});
 
 const db = mongoose.connection;
 
