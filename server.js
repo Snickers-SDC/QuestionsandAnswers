@@ -1,7 +1,7 @@
 const express = require('express');
 const port = 8080;
 const Mongodb = require('./mongo_database');
-const MySQLdb = require('./mysql_database');
+// const MySQLdb = require('./mysql_database');
 
 const app = express();
 
